@@ -1,0 +1,33 @@
+#include<stdio.h>
+ int factorial(int n){
+ 												if (n==1){
+												return 1;
+												}
+	else{
+			int result = n * factorial(n-1);
+			return  result;
+			}
+}  
+int main(){
+					int n = 15;
+					int i = 3;
+					int multiplecounterofthree = 0;
+					int multiplecounteroffive = 0;
+					int calculatednumbers = 0;
+					while(i<=n){
+											if(i%3==0){
+																	multiplecounterofthree = multiplecounterofthree + 1;
+																}
+											if(i%5==0){
+																	multiplecounteroffive = multiplecounteroffive + 1;
+																}
+											i = i+1;
+											calculatednumbers = calculatednumbers + 1;
+										}
+					printf("the multiple of three are: %d\n",multiplecounterofthree);
+					printf("The multiple of five are: %d\n",multiplecounteroffive);
+					printf("The number calculate are: %d\n",calculatednumbers);
+					printf("\n%d! = %d\n", n, factorial(n));
+					system("PAUSE");
+					return 0;		
+}
